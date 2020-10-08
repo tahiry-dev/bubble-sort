@@ -17,8 +17,8 @@ def bubble_sort(arr)
     end
     arr
 end
-        
-    
+
+
 
 
 test = [3,2,6,9]
@@ -27,4 +27,5 @@ test = [1,100,8,4,5,0,6,6]
 
 test = [1,8,4,5,6,6]
 
+print "Sorted Array"
 puts bubble_sort(test)
