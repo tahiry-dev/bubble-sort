@@ -1,20 +1,26 @@
 def bubble_sort(arr)
-    sorted_arr = []
     swap = true
     while swap
+        swap = false
         puts "loop start"
         for i in 0...(arr.length-1)
-            swap = false
+            print " i= #{i} arr[i]= #{arr[i]} arr[i+1]= #{arr[i+1]}"
             if arr[i] > arr[i+1]
-            swap = true
+                print " swap = true "
+                swap = true
                 temp = arr[i]
                 arr[i] = arr[i+1]
                 arr[i+1] = temp
+            else
+              print " swap = false "
             end
             print arr
             print "\n"
+
         end
     end
+    puts
+    print "Sorted Array -> "
     arr
 end
 
@@ -25,7 +31,6 @@ test = [3,2,6,9]
 
 test = [1,100,8,4,5,0,6,6]
 
-test = [1,8,4,5,6,6]
+sorted_arr = bubble_sort(test)
 
-print "Sorted Array"
-puts bubble_sort(test)
+puts sorted_arr.inspect
