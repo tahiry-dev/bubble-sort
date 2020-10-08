@@ -21,8 +21,6 @@ def bubble_sort(arr)
   arr
 end
 
-test = [1, 100, 8, 4, 5, 0, 6, 6]
+test = [1, 100, 45, 4, 7, 0, 6, 6]
 
-sorted_arr = bubble_sort(test)
-
-puts sorted_arr.inspect
+puts bubble_sort(test).inspect
