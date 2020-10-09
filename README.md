@@ -1,6 +1,6 @@
 # bubble-sort
 
-> The goal of the project was to create a version of bubble-sort to sort an array using blocks, functions and yield operator.
+> The goal of the project was to create a version of bubble-sort in Ruby that sorts an array using blocks, functions and yield operator.
 
 ![bubble_sort](./img/bubble_sort.png)  
 
