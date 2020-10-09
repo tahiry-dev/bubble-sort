@@ -28,8 +28,7 @@ def bubble_sort_by(arr)
     swap = false
     (arr.length - 1).times do |i|
       compare = yield(arr[i], arr[i + 1])
-      # puts compare
-      if compare == 1
+      if compare > 0
         swap = true
         arr[i], arr[i + 1] = arr[i + 1], arr[i]
       end
@@ -39,7 +38,7 @@ def bubble_sort_by(arr)
 end
 
 str_arr = bubble_sort_by(%w[hi hello hey]) do |left, right|
-  right <=> left
+  left.length - right.length
 end
 
 print '2nd Sorted Array -> '
