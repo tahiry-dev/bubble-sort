@@ -1,5 +1,4 @@
-$compare = 5
-test = [1, 100, 45, 4, 7, 0, 6, 6]
+test = [1, 100, 45, 4, 57, 0, 6, 6]
 
 def bubble_sort(arr)
   puts 'Bubble Sort'
@@ -13,33 +12,35 @@ def bubble_sort(arr)
       end
     end
   end
-  print 'Sorted Array -> '
+
   arr
 end
-puts bubble_sort(test).inspect
+
+int_arr = bubble_sort(test)
+print 'Sorted Array -> '
+puts int_arr.inspect
+print "\n\n"
 
 def bubble_sort_by(arr)
-  print "\n"
   puts 'Bubble Sort By'
   swap = true
   while swap
     swap = false
     for i in 0...(arr.length - 1)
-      yield(arr[i], arr[i + 1])
-      if $compare == 1
+      compare = yield(arr[i], arr[i + 1])
+      # puts compare
+      if compare == 1
         swap = true
         arr[i], arr[i + 1] = arr[i + 1], arr[i]
       end
     end
   end
-  new_arr = arr
-  puts "Sorted Array -> #{arr}"
-  print "\n"
-  new_arr
+  arr
 end
 
-bubble_sort_by([1, 100, 45, 4, 7, 0, 6, 6]) do |left, right|
-  $compare = 1 if left > right
-  $compare = 0 if left == right
-  $compare = -1 if left < right
+str_arr = bubble_sort_by(%w[hi hello hey]) do |left, right|
+  right <=> left
 end
+
+print '2nd Sorted Array -> '
+puts str_arr.inspect
