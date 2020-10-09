@@ -28,7 +28,7 @@ def bubble_sort_by(arr)
     swap = false
     (arr.length - 1).times do |i|
       compare = yield(arr[i], arr[i + 1])
-      if compare > 0
+      if compare.positive?
         swap = true
         arr[i], arr[i + 1] = arr[i + 1], arr[i]
       end
