@@ -1,6 +1,16 @@
 # bubble-sort
 
-> The goal of the project was to create a version of bubble-sort to sort an array using blocks, functions and Yield,...   
+> The goal of the project was to create a version of bubble-sort to sort an array using blocks, functions and yield operator.
+
+![bubble_sort](./img/bubble_sort.png)  
+
+>Bubble Sort is an sorting algorithm that passes though an array, compares adjacent elementsand swaps them if neccesary.
+
+![screenshot](./img/screenshot.png)  
+
+## Live Demo
+
+[![Run on Repl.it](https://repl.it/badge/github/tahiry-dev/bubble-sort)](https://repl.it/github/tahiry-dev/bubble-sort)
 
 ## Built With
 
